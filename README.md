@@ -55,26 +55,7 @@ mvn clean compile
 ```
 
 ### Run GUI Application
-```bash
-mvn exec:java -Dexec.mainClass="com.cheeseanalysis.gui.MainApp"
-```
-
-Or with JavaFX plugin:
-```bash
-mvn javafx:run
-```
-
-### Run MapReduce Jobs
-
-#### Moisture Analysis
-```bash
-hadoop jar target/CheeseAnalysis-1.0-SNAPSHOT.jar com.cheeseanalysis.MoistureDriver /input/cheese_data.csv /output/moisture
-```
-
-#### Organic Percentage Analysis
-```bash
-hadoop jar target/CheeseAnalysis-1.0-SNAPSHOT.jar com.cheeseanalysis.OrganicDriver /input/cheese_data.csv /output/organic
-```
+Run 'Main.java'
 
 ## Data Setup
 
@@ -109,7 +90,7 @@ src/main/java/com/cheeseanalysis/
 1. Start the application using Maven
 2. The GUI will load with four filter options
 3. Select desired filters:
-   - Province Code (optional)
+   - Province Code (required for organic calculation)
    - Cheese Category (required for calculations)
    - Milk Type (required for moisture calculation)
    - Calculation Type (required)
